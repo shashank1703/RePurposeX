@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from './components/ui/button';
+import { Button } from '@/src/components/ui/button';
 import { Sparkles, ArrowRight, Zap, Globe, Repeat, User } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -9,7 +9,6 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 
 // Add these new imports
 import { Award, Users, Lightbulb, ArrowUpRight, CheckCircle } from "lucide-react";
-import Image from "next/image";
 
 export default function LandingPage() {
   const { data: session } = useSession();
@@ -45,21 +44,21 @@ export default function LandingPage() {
                   </span>
                   <div className="absolute top-full left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-900 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="py-1">
-                      <Link href="/content-generator" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Content Generator</Link>
+                      <Link href="/repurpose" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Content Generator</Link>
                       <Link href="/analytics" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Analytics</Link>
                       <Link href="/scheduler" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Post Scheduler</Link>
                     </div>
                   </div>
                 </div>
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link>
-                <Link href="/templates" className="text-gray-300 hover:text-white transition-colors">Templates</Link>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors">Pricing</Link>
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors">Templates</Link>
+                <Link href="#" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
               </div>
             </div>
 
             {/* Right Side Navigation */}
             <div className="hidden md:flex items-center gap-6">
-              <Link href="/docs" className="text-gray-300 hover:text-white transition-colors">Documentation</Link>
+              <Link href="#" className="text-gray-300 hover:text-white transition-colors">Documentation</Link>
               {session ? (
                 <div className="flex items-center gap-4">
                   <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors">Dashboard</Link>
@@ -76,8 +75,8 @@ export default function LandingPage() {
                 <div className="flex items-center gap-4">
                   <Button 
                     onClick={() => signIn()}
-                    variant="outline"
-                    className="border-gray-700 hover:bg-gray-800 text-gray-300"
+                    // variant="outline"
+                    className="border border-gray-700 text-gray-300 hover:bg-gray-800"
                   >
                     Sign In
                   </Button>
@@ -251,7 +250,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Link href="/pricing">
-              <Button variant="outline" className="px-8 py-6 text-lg font-semibold rounded-full border-purple-500/50 hover:bg-purple-500/10">
+              <Button variant="outline" className="px-8 py-5 text-lg font-semibold rounded-full border-2 border-purple-500 text-purple-600 bg-gray shadow-sm hover:bg-purple-50 hover:shadow-md hover:scale-105 transition-all duration-200">
                 View Pricing
               </Button>
             </Link>
@@ -458,9 +457,19 @@ export default function LandingPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 px-8 py-6 text-lg font-semibold rounded-full shadow-lg shadow-purple-500/20">
-              <Sparkles className="mr-2 h-5 w-5" /> Start Repurposing Now
-            </Button>
+            <Link href="/repurpose">
+              <Button
+                className="relative px-8 py-6 text-lg font-semibold rounded-full 
+                          bg-gradient-to-r from-purple-600 to-cyan-600 
+                          hover:from-purple-700 hover:to-cyan-700 
+                          shadow-lg shadow-purple-500/20 
+                          transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              >
+                <Sparkles className="mr-3 h-5 w-5 animate-pulse" />
+                Start Repurposing Now
+              </Button>
+            </Link>
+            
           </motion.div>
         </div>
       </motion.section>

@@ -1,4 +1,4 @@
-require("dotenv").config(); // Load environment variables at the top
+require("dotenv").config(); // Load environment variables 
 
 const express = require("express");
 const cors = require("cors");
@@ -110,7 +110,7 @@ async function generateContent(content, platform) {
       Original Content:
       ${content}
       
-      Transform this content for ${platform}:
+      Transform this content for ${platform} "without * and any other make sure its styled well":
     `;
 
     console.log(`🟢 Sending request to Gemini AI for ${platform}`);

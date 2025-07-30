@@ -1,12 +1,12 @@
 "use client"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Sparkles, Rocket, Globe, Loader2 } from "lucide-react"
-import PlatformSelector from "./app/components/PlatformSelector"
-import ContentInput from "./app/components/ContentInput"
-import ResultsDisplay from "./app/components/ResultsDisplay"
+import PlatformSelector from "@/src/components/PlatformSelector"
+import ContentInput from "@/src/components/ContentInput"
+import ResultsDisplay from "@/src/components/ResultsDisplay"
 import "./App.css"
+
 
 function App() {
   const [inputType, setInputType] = useState("text") // 'text' or 'url'

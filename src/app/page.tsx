@@ -45,8 +45,8 @@ export default function LandingPage() {
                   <div className="absolute top-full left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-900 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="py-1">
                       <Link href="/repurpose" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Content Generator</Link>
-                      <Link href="/analytics" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Analytics</Link>
-                      <Link href="/scheduler" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Post Scheduler</Link>
+                      <Link href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Analytics</Link>
+                      <Link href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Post Scheduler</Link>
                     </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ export default function LandingPage() {
                   <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors">Dashboard</Link>
                   <Button 
                     onClick={() => signOut()}
-                    variant="outline"
+                    {/* variant="outline" */}
                     className="border-gray-700 hover:bg-gray-800 text-gray-300"
                   >
                     <User className="w-4 h-4 mr-2" />

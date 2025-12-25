@@ -64,7 +64,7 @@ export default function LandingPage() {
                   <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors">Dashboard</Link>
                   <Button 
                     onClick={() => signOut()}
-                    {/* variant="outline" */}
+                    //variant="outline" 
                     className="border-gray-700 hover:bg-gray-800 text-gray-300"
                   >
                     <User className="w-4 h-4 mr-2" />

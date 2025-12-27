@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@/src/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Sparkles, ArrowRight, Zap, Globe, Repeat, User } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -64,7 +64,7 @@ export default function LandingPage() {
                   <Link href="/dashboard" className="text-gray-300 hover:text-white transition-colors">Dashboard</Link>
                   <Button 
                     onClick={() => signOut()}
-                    //variant="outline" 
+                    // variant="outline"
                     className="border-gray-700 hover:bg-gray-800 text-gray-300"
                   >
                     <User className="w-4 h-4 mr-2" />

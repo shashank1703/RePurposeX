@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import AuthProvider from '@/src/components/providers/auth-provider';
+import AuthProvider from '@/components/providers/auth-provider';
 
 export const metadata: Metadata = {
   title: 'repurposeX',

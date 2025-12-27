@@ -20,20 +20,19 @@
 │   ├── placeholder-user.jpg
 │   ├── placeholder.jpg
 │   └── placeholder.svg
-├── src
-│   ├── app
-│   │   ├── App.css
-│   │   ├── api
-│   │   ├── check
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   └── repurpose
-│   └── components
-│       ├── ContentInput.jsx
-│       ├── PlatformSelector.jsx
-│       ├── ResultsDisplay.jsx
-│       ├── providers
-│       └── ui
+├── app
+│   ├── App.css
+│   ├── api
+│   ├── check
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── repurpose
+└── components
+│   ├── ContentInput.jsx
+│   ├── PlatformSelector.jsx
+│   ├── ResultsDisplay.jsx
+│   ├── providers
+│   └── ui
 ├── tailwind.config.ts
 └── tsconfig.json
